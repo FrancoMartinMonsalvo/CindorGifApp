@@ -1,0 +1,167 @@
+
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca el lienzo detrás de otros elementos */
+}
+
+body {
+  color: rgb(253, 251, 251);
+  padding: 60px;
+  background-color: rgba(7, 7, 7, 0.438);
+  margin : 0;
+}
+
+input {
+  background-color: rgba(7, 7, 7, 0.438);
+  backdrop-filter: blur(5px); /* Suavizar el fondo detrás de la carta */
+  border-radius: 5px;
+  border: 1px solid rgb(97, 32, 158);
+  color: white;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px 15px;
+  width: 98.3%; 
+}
+
+h1{ 
+  color: rgb(253, 251, 251);
+  text-align: center;
+}
+
+h2 {
+  color: rgb(253, 251, 251);
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: rgb(253, 251, 251);
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  font-family: Helvetica, Arial, sans-serif;
+  border: 1px solid rgb(97, 32, 158);
+  backdrop-filter: blur(5px); /* Fondo negro con 70% de opacidad */
+  color: white; /* Texto blanco para buen contraste */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de carta */
+  max-width: 300px; /* Ancho máximo de la carta */
+  margin: 20px auto; /* Centrar la carta en la página */
+  position: relative;
+}
+
+.card p {
+  color: rgb(253, 251, 251);
+  flex: 1;
+  font-size: 1.5rem;
+  margin-top: 5px;
+  padding: 5px 20px 0px 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+.fav-item{ 
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgb(255, 82, 226);
+  border: none;
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra suave */
+  transition: background-color 0.3s ease-in-out; /* Añade una transición suave al pasar el mouse */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.fav-item:hover {
+  background: rgb(201, 66, 178);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar {
+  backdrop-filter: blur(10px); /* Desenfoque del fondo */
+  border-bottom: 2px solid rgb(97, 32, 158); /* Borde inferior */
+  margin-top: 0px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Evita el desbordamiento del contenido */
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(253, 251, 251); /* Color blanco */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 15px; /* Espaciado entre los elementos */
+}
+
+.navbar ul li {
+  margin-left: 0;
+}
+
+.navbar ul li a {
+  color: rgb(253, 251, 251); /* Color blanco */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: rgb(97, 32, 158); /* Cambio de color al pasar el mouse */
+}
+
+.navbar ul li .active {
+  border-bottom: 2px solid rgb(97, 32, 158); /* Indicador de la página activa */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Coloca la barra de navegación en columna en pantallas pequeñas */
+      padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .navbar ul {
+      flex-direction: column; /* Coloca los enlaces en columna en pantallas pequeñas */
+      width: 100%;
+      padding: 0; /* Elimina el padding */
+  }
+
+  .navbar ul li {
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+      text-align: center; /* Centra los elementos en pantallas pequeñas */
+  }
+}
