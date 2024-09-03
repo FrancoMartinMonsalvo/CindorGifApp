@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifGridItem Debe de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Baki"
+      src="http://localhost/https//uBaki.com/baki.jpg"
+    />
+    <p>
+      Baki
+    </p>
+    <button
+      class="fav-item"
+    >
+      🤍
+    </button>
+  </div>
+</div>
+`;

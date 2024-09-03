@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 
 export const AddCategory = ({ onNewCategory }) => {
@@ -16,15 +17,15 @@ export const AddCategory = ({ onNewCategory }) => {
         //caracteres, no manda el input
         if (inputValue.trim().length <= 1) return;
 
+        setInputValue('');
         onNewCategory(inputValue.trim());
 
-        setInputValue('');
         //eso es para que una vez mande el input, se limpie el espacio
 
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} aria-label='form'>
             <input
                 type="text"
                 placeholder="Buscar gifs"
@@ -35,4 +36,9 @@ export const AddCategory = ({ onNewCategory }) => {
 
 
     )
+}
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired,
+
 }

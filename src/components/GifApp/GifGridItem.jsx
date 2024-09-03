@@ -1,4 +1,5 @@
 // GifGridItem.jsx
+import Proptypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
 import { FavoriteButton } from '../GifApp';
 
@@ -18,3 +19,8 @@ export const GifGridItem = ({ title, url, id }) => {
     </div>
   );
 };
+
+GifGridItem.proptypes = {
+  title: Proptypes.string.isRequired,
+  url: Proptypes.string.isRequired,
+}
